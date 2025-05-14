@@ -1,0 +1,31 @@
+<div *ngIf="favorites.length > 0; else noFavorites">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>City</th>
+          <th>State</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let favorite of favorites; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td><a href="#" (click)="fetchWeatherData(favorite.lat, favorite.lng, favorite.city, favorite.state)">{{ favorite.city }}</a></td>
+          <td><a href="#" (click)="fetchWeatherData(favorite.lat, favorite.lng, favorite.city, favorite.state)">{{ favorite.state }}</a></td>
+          <td>
+            <button class="btn" (click)="removeFavorite(i)">
+              <i class="bi bi-trash-fill"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <ng-template #noFavorites>
+    <div class="alert alert-warning text-left" role="alert">
+      <b>Sorry</b>! No records found.
+    </div>
+  </ng-template>
+  

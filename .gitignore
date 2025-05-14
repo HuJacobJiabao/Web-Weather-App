@@ -1,0 +1,29 @@
+# === Angular frontend: weather-app ===
+/weather-app/node_modules/
+/weather-app/dist/
+/weather-app/.angular/
+/weather-app/.vscode/
+/weather-app/.env
+/weather-app/.env.*
+
+# OS/IDE files (both frontend & backend)
+.DS_Store
+Thumbs.db
+*.log
+
+# Angular build artifacts
+/weather-app/browser/
+/weather-app/**/*.tmp
+/weather-app/**/Images/
+.weather-app/**/media/
+
+# === Node.js backend: weather-backend ===
+/weather-backend/node_modules/
+/weather-backend/dist/
+/weather-backend/.env
+/weather-backend/.env.*
+
+# npm debug files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
